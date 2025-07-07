@@ -70,9 +70,35 @@ console.log(jsonValue);
 
 // FUnctions Are Objects
 
+// Function statement
 function wish() {
   console.log('hi');
 }
 // Functions are objects in javascript
 wish.language = 'english';
 console.log(wish.language);
+
+// Function Expression
+// anonymusGreet(); not Hoisted
+var anonymusGreet = function () {
+  console.log('hi');
+};
+
+anonymusGreet();
+
+function log(a) {
+  console.log(a);
+}
+log(3); // value on the fly
+log('hello'); // string on the fly
+log({
+  // creating object on the fly
+  greeting: 'hi',
+});
+function log2(a) {
+  a();
+}
+log2(function () {
+  // creating function on the fly
+  console.log('hi');
+});
