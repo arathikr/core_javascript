@@ -67,3 +67,12 @@ var objectLiteral = {
 console.log(JSON.stringify(objectLiteral));
 var jsonValue = JSON.parse('{"firstname": "Mary", "isAProgremmer": true}');
 console.log(jsonValue);
+
+// FUnctions Are Objects
+
+function wish() {
+  console.log('hi');
+}
+// Functions are objects in javascript
+wish.language = 'english';
+console.log(wish.language);
