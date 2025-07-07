@@ -132,3 +132,36 @@ console.log(d);
 c = { greeting: 'howdy' };
 console.log(c);
 console.log(d);
+
+// Object, Functions and This
+console.log(this);
+function f() {
+  console.log(this);
+  this.newvariable = 'hello';
+}
+
+var f1 = function () {
+  console.log(this);
+};
+
+f();
+console.log(newvariable);
+f1();
+
+var f2 = {
+  name: 'The f2 object',
+  log: function () {
+    var self = this;
+    // this.name = 'Updated f2 object';
+    self.name = 'Updated f2 object';
+    console.log(self);
+
+    var updatename = function (newname) {
+      //   this.name = newname;
+      self.name = newname;
+    };
+    updatename('Updated again! The f2 object'); // refer to global object
+    console.log(self);
+  },
+};
+f2.log();
