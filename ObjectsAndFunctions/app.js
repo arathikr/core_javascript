@@ -102,3 +102,33 @@ log2(function () {
   // creating function on the fly
   console.log('hi');
 });
+
+// By Value Vs By Reference
+
+// By value (primitives)
+var a = 3;
+var b;
+b = a; // b will create new memory
+console.log(a);
+console.log(b);
+
+// By Reference (all objects (including functions))
+var c = { greeting: 'hi' };
+var d;
+d = c;
+c.greeting = 'hello'; // mutate
+console.log(c);
+console.log(d);
+
+// by reference (even as parameters)
+function changeGreeting(obj) {
+  obj.greeting = 'Hola';
+}
+changeGreeting(d);
+console.log(c);
+console.log(d);
+
+// equals operator setsup new memory space (new address)
+c = { greeting: 'howdy' };
+console.log(c);
+console.log(d);
