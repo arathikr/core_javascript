@@ -21,3 +21,28 @@ console.log(person.address.street);
 console.log(person.address.city);
 // Finding Properties and methods dynamically
 console.log(person['address']['state']);
+
+// Object Literal
+var person2 = {
+  firstname: 'Ashok',
+  lastname: 'Rathikrindi',
+  address: {
+    street: '111 Main St',
+    city: 'New York',
+    state: 'NY',
+  },
+};
+
+console.log(person2);
+
+function greet(person) {
+  console.log('Hi ' + person.firstname);
+}
+
+greet(person2);
+
+// Creating object on the fly
+greet({
+  firstname: 'Nandini',
+  lastname: 'Rathikrindi',
+});
