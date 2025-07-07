@@ -57,3 +57,13 @@ english.greet = 'Hello!';
 spanish.greet = 'Hola!';
 
 console.log(english);
+
+// JSON and Object literals
+var objectLiteral = {
+  firstname: 'Mary',
+  isAProgrammer: true,
+};
+
+console.log(JSON.stringify(objectLiteral));
+var jsonValue = JSON.parse('{"firstname": "Mary", "isAProgremmer": true}');
+console.log(jsonValue);
