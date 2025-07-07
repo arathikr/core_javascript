@@ -46,3 +46,14 @@ greet({
   firstname: 'Nandini',
   lastname: 'Rathikrindi',
 });
+
+// Faking Namespaces
+var greet = 'Hello!';
+var greet = 'Hola!';
+
+var english = {};
+var spanish = {};
+english.greet = 'Hello!';
+spanish.greet = 'Hola!';
+
+console.log(english);
