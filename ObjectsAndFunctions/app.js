@@ -228,3 +228,32 @@ function greetSpanish(firstname, lastname) {
 
 greetEnglish('John', 'Doe');
 greetSpanish('John', 'Doe');
+
+// using an Immediately Invoked Function Expression (IIFE)
+// greeting holds the string that returns from function
+var greeting = (function (name) {
+  return 'Hello ' + name;
+})('Ashok');
+
+console.log(greeting);
+
+// 3; // valid
+
+// ('I am a string'); // valid
+
+// {
+//   name: 'Ashok'; // valid
+// }
+
+// not valid
+// function(name){
+//   return 'Hello ' + name
+// }
+
+// Valid
+var firstname = 'Anusha';
+(function (name) {
+  var greeting = 'Hello';
+  console.log(greeting + ' ' + name);
+  return 'Hello ' + name;
+})(firstname); // IIFE
