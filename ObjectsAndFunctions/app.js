@@ -176,10 +176,30 @@ var arr = [
   },
   function (name) {
     var greeting = 'Hello';
-    console.log(greeting + name);
+    console.log(greeting + ' ' + name);
   },
   'hello',
 ];
 
 console.log(arr);
 arr[3](arr[2].name);
+
+function welcome(firstname, lastname, language) {
+  language = language || 'en';
+
+  if (arguments.length === 0) {
+    console.log('Missing parameters');
+    console.log('--------------');
+    return;
+  }
+  console.log(firstname);
+  console.log(lastname);
+  console.log(language);
+  console.log('argumnets:', arguments);
+  console.log('--------------------');
+}
+
+welcome();
+welcome('John');
+welcome('John', 'Doe');
+welcome('John', 'Doe', 'es');
