@@ -165,3 +165,21 @@ var f2 = {
   },
 };
 f2.log();
+
+// Arrays
+var arr = [
+  1,
+  false,
+  {
+    name: 'Ashok',
+    address: '111 Main ST.',
+  },
+  function (name) {
+    var greeting = 'Hello';
+    console.log(greeting + name);
+  },
+  'hello',
+];
+
+console.log(arr);
+arr[3](arr[2].name);
