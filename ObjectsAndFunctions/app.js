@@ -68,7 +68,7 @@ console.log(JSON.stringify(objectLiteral));
 var jsonValue = JSON.parse('{"firstname": "Mary", "isAProgremmer": true}');
 console.log(jsonValue);
 
-// FUnctions Are Objects
+// Functions Are Objects
 
 // Function statement
 function wish() {
@@ -184,6 +184,7 @@ var arr = [
 console.log(arr);
 arr[3](arr[2].name);
 
+// arguments keyword
 function welcome(firstname, lastname, language) {
   language = language || 'en';
 
@@ -203,3 +204,27 @@ welcome();
 welcome('John');
 welcome('John', 'Doe');
 welcome('John', 'Doe', 'es');
+
+// Function Overloading
+
+function greetOverload(firstname, lastname, language) {
+  language = language || 'en';
+  if (language === 'en') {
+    console.log('Hello ' + firstname + ' ' + lastname);
+  }
+  if (language === 'es') {
+    console.log('Hola ' + firstname + ' ' + lastname);
+  }
+}
+
+// greetOverload('John', 'Doe', 'en');
+
+function greetEnglish(firstname, lastname) {
+  greetOverload(firstname, lastname, 'en');
+}
+function greetSpanish(firstname, lastname) {
+  greetOverload(firstname, lastname, 'es');
+}
+
+greetEnglish('John', 'Doe');
+greetSpanish('John', 'Doe');
