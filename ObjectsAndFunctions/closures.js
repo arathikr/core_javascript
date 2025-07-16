@@ -49,3 +49,22 @@ var fs2 = buildFunctions2();
 fs2[0]();
 fs2[1]();
 fs2[2]();
+
+// Function Factories
+function makeGreeting(language) {
+  return function (firstname, lastname) {
+    if (language === 'en') {
+      console.log('Hello ' + firstname + ' ' + lastname);
+    }
+    if (language === 'es') {
+      console.log('Hola ' + firstname + ' ' + lastname);
+    }
+  };
+}
+/* greetEnglish is a function object 
+whose closure points to language being English */
+var greetEnglish = makeGreeting('en');
+var greetSpanish = makeGreeting('es');
+
+greetEnglish('Ashok', 'Rathikrindi');
+greetSpanish('Ashok', 'Rathikrindi');
